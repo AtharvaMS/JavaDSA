@@ -1,0 +1,101 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "possiblesum",
+      "request": "launch",
+      "mainClass": "ArrayList.possiblesum",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "Arrayliist",
+      "request": "launch",
+      "mainClass": "ArrayList.Arrayliist",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "gridWays",
+      "request": "launch",
+      "mainClass": "Backtracking.gridWays",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "Nqeens",
+      "request": "launch",
+      "mainClass": "Backtracking.Nqeens",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "subset",
+      "request": "launch",
+      "mainClass": "Backtracking.subset",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "Launch Recursion",
+      "request": "launch",
+      "mainClass": "Recursion.Recursion",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrintNum",
+      "request": "launch",
+      "mainClass": "Recursion.PrintNum",
+      "projectName": "Java DSA_c9e22d0c"
+    },
+    {
+      "type": "java",
+      "name": "Launch PrintNum",
+      "request": "launch",
+      "mainClass": "Recursion.PrintNum",
+      "projectName": "Java DSA_ff09402d"
+    },
+    {
+      "type": "java",
+      "name": "Launch ComplexSoln",
+      "request": "launch",
+      "mainClass": "ComplexSoln",
+      "projectName": "Java DSA_ff09402d"
+    },
+    {
+      "type": "java",
+      "name": "Launch OOPS",
+      "request": "launch",
+      "mainClass": "OOPS",
+      "projectName": "Java DSA_ff09402d"
+    },
+    {
+      "type": "java",
+      "name": "Launch basic",
+      "request": "launch",
+      "mainClass": "BitManipulatiin.basic",
+      "projectName": "Java DSA_ff09402d"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/Java DSA/DoaaLab",
+      "program": "d:/Java DSA/DoaaLab/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
