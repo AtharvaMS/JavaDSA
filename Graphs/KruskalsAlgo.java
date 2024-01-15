@@ -69,15 +69,16 @@ public class KruskalsAlgo {
 
     }
 
+    //O(v + ElogE)
     public static void kruskal(ArrayList<Edge> edges, int v){
         init();
         //sorting
-        Collections.sort(edges);
+        Collections.sort(edges); //O(ElogE)
         
         int count = 0;
         int mstCost =0;
 
-        for(int i=0; count<v-1; i++){
+        for(int i=0; count<v-1; i++){ //O(V)
             Edge e = edges.get(i); //(src, dest, wt)
             
             int parA = find(e.src); // src = a
