@@ -20,7 +20,8 @@ public class DisjointDataSet {
             return x;
         }
 
-        return find(parent[x]);
+        //path compression
+        return parent[x] = find(parent[x]);
     }
 
     public static void union(int a, int b){
@@ -40,7 +41,7 @@ public class DisjointDataSet {
     }
 
 
-
+    // path compression to reduce find function call
     public static void main(String[] args) {
         init();
         System.out.println(find(3));
