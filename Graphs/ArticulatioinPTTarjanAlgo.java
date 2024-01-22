@@ -2,7 +2,7 @@ package Graphs;
 
 import java.util.ArrayList;
 
-public class TarjansAlgorithm {
+public class ArticulatioinPTTarjanAlgo {
     static class Edge{
         int src;
         int dest;
@@ -39,7 +39,7 @@ public class TarjansAlgorithm {
         // graph[5].add(new Edge(5, 4));
     }
 
-    public static void findBridgeTrajansAlgo(ArrayList<Edge> graph[], int v){
+    public static void getArticulationPoint(ArrayList<Edge> graph[], int v){
         int discovery_time[] = new int[v];
         int lowest_discovery_time[] = new int[v];
         boolean vis[] = new boolean[v];
@@ -56,6 +56,7 @@ public class TarjansAlgorithm {
         boolean[] vis, int time) {
         vis[curr] = true;
         discovery_time[curr] = lowest_discovery_time[curr] = ++time;
+        int children = 0;
 
         for(int i=0; i<graph[curr].size(); i++){
             Edge e = graph[curr].get(i);
@@ -63,25 +64,32 @@ public class TarjansAlgorithm {
 
             if(neighbour == par){
                 continue;
-            }else if (!vis[neighbour]) {
+            }else if (vis[neighbour]) {
+                lowest_discovery_time[curr] = Math.min(lowest_discovery_time[curr], discovery_time[neighbour]);
+                // if(discovery_time[curr] < lowest_discovery_time[neighbour]){
+                //     System.out.println("Bridge Edge " + curr + "----> " + neighbour);
+                // }
+            }else{
                 dfs(graph, neighbour, curr, discovery_time, lowest_discovery_time, vis, time);
                 lowest_discovery_time[curr] = Math.min(lowest_discovery_time[curr], lowest_discovery_time[neighbour]);
-                if(discovery_time[curr] < lowest_discovery_time[neighbour]){
-                    System.out.println("Bridge Edge " + curr + "----> " + neighbour);
+                if(par != -1 && discovery_time[curr] <= lowest_discovery_time[neighbour]){
+                    System.out.println("Articulation point is: " + curr);
                 }
-            }else{
-                lowest_discovery_time[curr] = Math.min(lowest_discovery_time[curr], discovery_time[neighbour]);
+                children++;
             }
         }
-    }   
-
+        if(par == -1 && children>1){
+            System.out.println("Articulation point is: " + curr);
+        }
+    }  
     public static void main(String[] args) {
-        int v =6;
+        int v =5;
         ArrayList<Edge> graph[] = new ArrayList[v];
         createGraph(graph);
-        findBridgeTrajansAlgo(graph, v);
+        getArticulationPoint(graph, v);
+        
 
-
+        
     }
     
 }
